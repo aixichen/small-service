@@ -28,6 +28,10 @@ module.exports = appInfo => {
     secret: 'xxxxxxxxxxxxx',
     match: '/jwt',
   };
+  config.cors = {
+    origin: '*',
+    allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH,OPTIONS',
+  };
 
   return config;
 };

@@ -51,8 +51,7 @@ class AccountController extends Controller {
         this.ctx.throw(404, '联系方式必填');
       }
       await ctx.service.account.create(input);
-      const result = '';
-      ctx.body = result;
+      this.ctx.helper.success(this.ctx);
     } catch (error) {
       this.ctx.helper.error(this.ctx, 404, error.message);
     }
